@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/Rakshitha%20R/OneDrive/Desktop/text1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume &amp; Bio-data Website</title>
+
+    <!-- INTERNAL CSS (style.css merged) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+        }
+
+        header {
+            background: #2d89ef;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .content {
+            background: white;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .biodata-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .biodata-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+        }
+
+        .page { display: none; }
+        .active { display: block; }
+    </style>
+
+    <!-- jQuery -->
+    <script src="./Resume &amp; Bio-data Website_files/jquery-3.6.0.min.js.download"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a onclick="showPage(&#39;resume&#39;)">Resume</a>
+            <a onclick="showPage(&#39;biodata&#39;)">Bio-data</a>
+        </nav>
+    </header>
+
+    <!-- RESUME PAGE -->
+    <section id="resume" class="content page">
+        <h2>Personal Details</h2>
+        <p><strong>your Name:</strong> Rakshitha R</p>
+        <p><strong>Email:</strong> rrathnamma279@gmail.com</p>
+
+        <h2>Education</h2>
+        <ul>
+            <li>B.E – JSSATEB</li>
+            <li>Intermediate – Nisarga independent pu College</li>
+            <li>SSC – S D A High School</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>C, Java, Python</li>
+            <li>Communication Skills</li>
+        </ul>
+
+        <h2>Experience</h2>
+        <p>Currently pursuing my education, no formal experience yet.</p>
+    </section>
+
+    <!-- BIODATA PAGE -->
+    <section id="biodata" class="content page active">
+        <table class="biodata-table">
+            <tbody><tr><td>Name</td><td>Rakshitha R</td></tr>
+            <tr><td>Father’s Name</td><td>Ramesh</td></tr>
+            <tr><td>Date of Birth</td><td>10-10-2004</td></tr>
+            <tr><td>Gender</td><td>Female</td></tr>
+            <tr><td>Nationality</td><td>Indian</td></tr>
+            <tr><td>Address</td><td>Chamarajanagar,Karnataka</td></tr>
+        </tbody></table>
+    </section>
+
+    <footer>
+        <p>© 2025 Rakshitha R</p>
+    </footer>
+
+    <!-- INTERNAL JAVASCRIPT (script.js merged) -->
+    <script>
+        function showPage(pageName) {
+            $(".page").removeClass("active");
+            $("#" + pageName).addClass("active");
+        }
+
+        $(document).ready(function () {
+            $("h2").click(function () {
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+
+
+
+</body></html>
