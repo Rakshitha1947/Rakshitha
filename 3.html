@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume & Bio-data Website</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+        }
+
+        header {
+            background: #2d89ef;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .content {
+            background: white;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* FIXED PROFILE PHOTO CSS */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;        /* Makes image fit perfectly */
+            object-position: center;  /* Keeps face centered */
+            border: 4px solid #2d89ef;
+            display: block;
+            margin: 0 auto 20px auto; /* centers image */
+        }
+
+        .biodata-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .biodata-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+        }
+
+        .page { display: none; }
+        .active { display: block; }
+    </style>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <a onclick="showPage('resume')">Resume</a>
+            <a onclick="showPage('biodata')">Bio-data</a>
+        </nav>
+    </header>
+
+    <!-- RESUME PAGE -->
+    <section id="resume" class="content page active">
+
+        <!-- PROFILE PHOTO -->
+        <img src="https://uploads.onecompiler.io/445gx58tn/445hn7wup/WhatsApp%20Image%202025-11-23%20at%209.19.58%20PM.jpeg" alt="Profile Picture" class="profile-photo">
+
+        <h2>Personal Details</h2>
+        <p><strong>Your Name:</strong> Rakshitha R</p>
+        <p><strong>Email:</strong> rrathnamma279@gmail.com</p>
+
+        <h2>Education</h2>
+        <ul>
+            <li>B.E – JSSATEB</li>
+            <li>Intermediate – Nisarga Independent PU College</li>
+            <li>SSC – S D A High School</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>C, Java, Python</li>
+            <li>Communication Skills</li>
+        </ul>
+
+        <h2>Experience</h2>
+        <p>Currently pursuing my education, no formal experience yet.</p>
+    </section>
+
+    <!-- BIODATA PAGE -->
+    <section id="biodata" class="content page">
+        <table class="biodata-table">
+            <tr><td>Name</td><td>Rakshitha R</td></tr>
+            <tr><td>Father’s Name</td><td>Ramesh</td></tr>
+            <tr><td>Date of Birth</td><td>10-10-2004</td></tr>
+            <tr><td>Gender</td><td>Female</td></tr>
+            <tr><td>Nationality</td><td>Indian</td></tr>
+            <tr><td>Address</td><td>Chamarajanagar, Karnataka</td></tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2025 Rakshitha R</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function showPage(pageName) {
+            $(".page").removeClass("active");
+            $("#" + pageName).addClass("active");
+        }
+
+        $(document).ready(function () {
+            $("h2").click(function () {
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+
+</body>
+</html>
